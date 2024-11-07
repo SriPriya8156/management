@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Event</title>
+</head>
+<body>
+  <h1>Change Event</h1>
+  <form action="/events/update/<%= event._id %>" method="POST">
+    <label for="eventName">Event Name:</label>
+    <input type="text" name="eventName" id="eventName" value="<%= event.eventName %>" required>
+    
+    <label for="price">Price:</label>
+    <input type="number" name="price" id="price" value="<%= event.price %>" required>
+    
+    <label for="image">Image URL:</label>
+    <input type="text" name="image" id="image" value="<%= event.image %>" required>
+   
+    <button type="submit">Add an event</button>
+  </form>
+</body>
+</html>
